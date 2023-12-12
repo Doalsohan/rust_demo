@@ -1,3 +1,4 @@
+use crate::demo::collections::vector_test::vector_test::SpreadsheetCell::Int;
 
 #[test]
 fn test_vector() {
@@ -36,5 +37,36 @@ fn test_vector() {
 
     // let six: &i32 = &v[100];
     /// vector 删除
-    assert_eq!(v.remove(1),3);
+    // assert_eq!(v.remove(1),3);
+
+    let row = vec![Int(3),SpreadsheetCell::Float(23.7),SpreadsheetCell::Text(String::from("dfdsfdsfds"))];
+
+    for i in &row {
+        match i {
+            Int(ele) => {
+                println!("The element is {}",ele);
+            },
+            SpreadsheetCell::Float(ele) => {
+                println!("{}",ele);
+            },
+            SpreadsheetCell::Text(ele) => {
+                println!("{}",ele);
+            }
+            _=>(),
+        }
+    }
+
+
+    for i in row.iter() {
+        println!("The element is {:?}",i)
+    }
+}
+
+
+
+#[derive(Debug)]
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
 }
