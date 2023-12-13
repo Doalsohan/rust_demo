@@ -30,4 +30,24 @@ fn map_test(){
 
     /// 如果将值的引用插入哈希 map，这些值本身将不会被移动进哈希 map。
     /// 但是这些引用指向的值必须至少在哈希 map 有效时也是有效的。
+
+    let mut scores = HashMap::new();
+
+    scores.insert(String::from("Blue"), 10);
+    match scores.insert(String::from("Blue"), 25) {
+        Some(val) => println!("The Origin Value : {val}"),
+        None => (),
+    };
+
+    println!("{:?}", scores);
+
+
+
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Blue"), 10);
+
+    scores.entry(String::from("Yellow")).or_insert(50);
+    scores.entry(String::from("Blue")).or_insert(50);
+
+    println!("{:?}", scores);
 }
