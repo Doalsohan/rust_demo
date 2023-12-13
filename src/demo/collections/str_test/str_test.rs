@@ -55,4 +55,8 @@ fn test_string() {
     let s1 = "hello";
     let s2 = "hello";
     assert_eq!(*s1, *s2);
+
+    let hello = "Здравствуйте";
+    let answer = &hello[0..2];
+    println!("The answer is {answer}");
 }
