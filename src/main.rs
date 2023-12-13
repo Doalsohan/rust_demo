@@ -114,14 +114,14 @@ fn main() {
 
 
     // owner_ship();
-    // let str = "Hello,jjjjjjjjjb";
+    // let str_test = "Hello,jjjjjjjjjb";
 
-    // println!("{str}");
+    // println!("{str_test}");
 
-    // str.push_str(", world");
+    // str_test.push_str(", world");
 
 
-    // println!("{}",str);
+    // println!("{}",str_test);
 
 
     let mut sbc = String::from("hello, word");
