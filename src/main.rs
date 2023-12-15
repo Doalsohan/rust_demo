@@ -55,6 +55,8 @@ fn main() {
 
     println!("变量作用域:{}",str);
 
+    panic!("crash and burn");
+
     let str1 = str;
 
     println!("变量作用域:{}",str);

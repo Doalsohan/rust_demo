@@ -60,6 +60,11 @@ fn test_vector() {
     for i in row.iter() {
         println!("The element is {:?}",i)
     }
+
+
+    let mut hqm = vec![1,2,3,4,5];
+    let one = &hqm[99];
+    println!("The One Is : {one}");
 }
 
 
