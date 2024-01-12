@@ -1,5 +1,8 @@
 use crate::demo::collections::vector_test::vector_test::SpreadsheetCell::Int;
 
+// 引用确保指向某个特定类型的有效值
+// 对象的引用不获取值的所有权
+
 #[test]
 fn test_vector() {
     let mut v = vec![1,2,3,4,5];
@@ -75,3 +78,16 @@ enum SpreadsheetCell {
     Float(f64),
     Text(String),
 }
+
+#[test]
+fn test_ref() {
+    let s1 = String::from("Rust Learn");
+    let len = get_str_len(&s1);
+    println!("The Length of '{}' is {}.",s1,len);
+}
+
+
+fn get_str_len(s: &String) -> usize {
+    s.len()
+}
+
