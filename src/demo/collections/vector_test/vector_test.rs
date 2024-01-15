@@ -1,3 +1,4 @@
+use std::ops::Add;
 use crate::demo::collections::vector_test::vector_test::SpreadsheetCell::Int;
 
 // 引用确保指向某个特定类型的有效值
@@ -84,6 +85,8 @@ fn test_ref() {
     let s1 = String::from("Rust Learn");
     let len = get_str_len(&s1);
     println!("The Length of '{}' is {}.",s1,len);
+    let s2 = concat_str(s1);
+    println!("Result String {}",s2)
 }
 
 
@@ -91,3 +94,7 @@ fn get_str_len(s: &String) -> usize {
     s.len()
 }
 
+fn concat_str(s: String) -> String{
+    let t = String::from("sdsadsa");
+    s.add(&t)
+}
